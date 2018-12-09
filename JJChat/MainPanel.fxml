@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<Pane xmlns:fx="http://javafx.com/fxml"
+      xmlns="http://javafx.com/javafx"
+      fx:controller="MainPanelController"
+      prefHeight="600.0" prefWidth="700.0">
+
+    <children>
+        <ImageView>
+            <image>
+                <Image url="resources/timg.jpg"/>
+            </image>
+        </ImageView>
+        <Label fx:id="peopleOnline" layoutX="500" layoutY="50" text="People online: "/>
+        <ScrollPane fx:id="scroll" layoutX="50" layoutY="50" prefWidth="430" prefHeight="370" opacity="0.7">
+            <Label fx:id="textShowingArea" maxWidth="400" wrapText="true">
+            </Label>
+        </ScrollPane>
+        <HBox layoutX="50" layoutY="460" spacing="15">
+            <TextArea fx:id="sendingArea" prefWidth="350" prefHeight="100" wrapText="true" opacity="0.7"/>
+            <Button fx:id="send" text="Send" onAction="#handleButtonAction"/>
+        </HBox>
+
+    </children>
+</Pane>
+
